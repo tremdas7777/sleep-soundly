@@ -137,8 +137,26 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
   }
+}
+
+@keyframes livetag-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.livetag-marquee {
+  animation: livetag-marquee 32s linear infinite;
 }

@@ -1,24 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ProductOffer } from "@/components/livetag/product-offer";
+import { SalesSections } from "@/components/livetag/sales-sections";
+import { SiteShell } from "@/components/livetag/site-shell";
+import { PRODUCT } from "@/lib/product";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: `${PRODUCT.name} — Rastreador GPS que grava áudio` },
+      {
+        name: "description",
+        content:
+          "LiveTag Pro: GPS global e gravação de áudio ao vivo. Bateria de até 1 ano, app grátis, sem mensalidade. Frete grátis.",
+      },
+      { property: "og:title", content: `${PRODUCT.name} — localiza e grava áudio em tempo real` },
+      {
+        property: "og:description",
+        content: "Mini rastreador GPS com microfone. Veja no mapa, ouça ao vivo e grave o ambiente no celular.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteShell>
+      <ProductOffer />
+      <SalesSections />
+    </SiteShell>
   );
 }

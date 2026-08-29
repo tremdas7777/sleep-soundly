@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as PagamentoSeguroRouteImport } from './routes/pagamento-seguro'
+import { Route as PoliticaPrivacidadeRouteImport } from './routes/politica-privacidade'
+import { Route as PrazoEntregaRouteImport } from './routes/prazo-entrega'
+import { Route as RastrearRouteImport } from './routes/rastrear'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as TrocasRouteImport } from './routes/trocas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagamentoSeguroRoute = PagamentoSeguroRouteImport.update({
+  id: '/pagamento-seguro',
+  path: '/pagamento-seguro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaPrivacidadeRoute = PoliticaPrivacidadeRouteImport.update({
+  id: '/politica-privacidade',
+  path: '/politica-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrazoEntregaRoute = PrazoEntregaRouteImport.update({
+  id: '/prazo-entrega',
+  path: '/prazo-entrega',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RastrearRoute = RastrearRouteImport.update({
+  id: '/rastrear',
+  path: '/rastrear',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrocasRoute = TrocasRouteImport.update({
+  id: '/trocas',
+  path: '/trocas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/pagamento-seguro': typeof PagamentoSeguroRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/prazo-entrega': typeof PrazoEntregaRoute
+  '/rastrear': typeof RastrearRoute
+  '/termos': typeof TermosRoute
+  '/trocas': typeof TrocasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/pagamento-seguro': typeof PagamentoSeguroRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/prazo-entrega': typeof PrazoEntregaRoute
+  '/rastrear': typeof RastrearRoute
+  '/termos': typeof TermosRoute
+  '/trocas': typeof TrocasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/pagamento-seguro': typeof PagamentoSeguroRoute
+  '/politica-privacidade': typeof PoliticaPrivacidadeRoute
+  '/prazo-entrega': typeof PrazoEntregaRoute
+  '/rastrear': typeof RastrearRoute
+  '/termos': typeof TermosRoute
+  '/trocas': typeof TrocasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/pagamento-seguro'
+    | '/politica-privacidade'
+    | '/prazo-entrega'
+    | '/rastrear'
+    | '/termos'
+    | '/trocas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contato'
+    | '/pagamento-seguro'
+    | '/politica-privacidade'
+    | '/prazo-entrega'
+    | '/rastrear'
+    | '/termos'
+    | '/trocas'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/pagamento-seguro'
+    | '/politica-privacidade'
+    | '/prazo-entrega'
+    | '/rastrear'
+    | '/termos'
+    | '/trocas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  PagamentoSeguroRoute: typeof PagamentoSeguroRoute
+  PoliticaPrivacidadeRoute: typeof PoliticaPrivacidadeRoute
+  PrazoEntregaRoute: typeof PrazoEntregaRoute
+  RastrearRoute: typeof RastrearRoute
+  TermosRoute: typeof TermosRoute
+  TrocasRoute: typeof TrocasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pagamento-seguro': {
+      id: '/pagamento-seguro'
+      path: '/pagamento-seguro'
+      fullPath: '/pagamento-seguro'
+      preLoaderRoute: typeof PagamentoSeguroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-privacidade': {
+      id: '/politica-privacidade'
+      path: '/politica-privacidade'
+      fullPath: '/politica-privacidade'
+      preLoaderRoute: typeof PoliticaPrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prazo-entrega': {
+      id: '/prazo-entrega'
+      path: '/prazo-entrega'
+      fullPath: '/prazo-entrega'
+      preLoaderRoute: typeof PrazoEntregaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rastrear': {
+      id: '/rastrear'
+      path: '/rastrear'
+      fullPath: '/rastrear'
+      preLoaderRoute: typeof RastrearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trocas': {
+      id: '/trocas'
+      path: '/trocas'
+      fullPath: '/trocas'
+      preLoaderRoute: typeof TrocasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  PagamentoSeguroRoute: PagamentoSeguroRoute,
+  PoliticaPrivacidadeRoute: PoliticaPrivacidadeRoute,
+  PrazoEntregaRoute: PrazoEntregaRoute,
+  RastrearRoute: RastrearRoute,
+  TermosRoute: TermosRoute,
+  TrocasRoute: TrocasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
