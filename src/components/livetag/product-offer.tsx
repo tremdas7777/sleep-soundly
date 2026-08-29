@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, ChevronDown, Mic, ShieldCheck, Star, Truck } from "lucide-react";
+import { Check, ChevronDown, MapPin, Mic, ShieldCheck, Smartphone, Star, Truck } from "lucide-react";
 import { brl, discountPct, getVariant, PRODUCT, unitPrice, type VariantId } from "@/lib/product";
 import { useOffer } from "@/components/livetag/offer-context";
 import { Button } from "@/components/ui/button";
@@ -53,10 +53,7 @@ export function ProductOffer() {
         </div>
 
         <div className="flex flex-col">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5B6B1A]">
-            Últimas unidades
-          </p>
-          <h1 className="mt-2 text-3xl font-black tracking-tight text-[#0B0D10] sm:text-4xl">
+          <h1 className="text-3xl font-black tracking-tight text-[#0B0D10] sm:text-4xl">
             {PRODUCT.name}
           </h1>
           <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -64,10 +61,12 @@ export function ProductOffer() {
               <Mic className="h-3.5 w-3.5" />
               Grava áudio
             </span>
-            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-bold text-[#0B0D10] ring-1 ring-black/10">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0B0D10] px-3 py-1 text-xs font-black uppercase tracking-wide text-[#C8F542]">
+              <MapPin className="h-3.5 w-3.5" />
               GPS global
             </span>
-            <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-bold text-[#0B0D10] ring-1 ring-black/10">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0B0D10] px-3 py-1 text-xs font-black uppercase tracking-wide text-[#C8F542]">
+              <Smartphone className="h-3.5 w-3.5" />
               Ao vivo no app
             </span>
           </div>
@@ -85,8 +84,7 @@ export function ProductOffer() {
           <p className="mt-4 text-sm text-[#0B0D10]/55">Vendido e entregue pela LiveTag</p>
 
           <div className="mt-6">
-            <p className="text-sm font-medium text-[#0B0D10]">Quantidade — quanto mais, menor o preço</p>
-            <div className="mt-2 grid grid-cols-3 gap-2 sm:gap-3">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {PRODUCT.variants.map((item) => {
                 const selected = item.id === variantId;
                 const offItem = discountPct(item);
