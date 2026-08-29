@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
-import { type VariantId } from "@/lib/product";
+import { getVariant, type VariantId } from "@/lib/product";
 
 type OfferContextValue = {
   variantId: VariantId;
@@ -21,7 +21,14 @@ export function OfferProvider({ children }: { children: ReactNode }) {
       setVariantId,
       checkoutOpen,
       setCheckoutOpen,
-      openCheckout: () => setCheckoutOpen(true),
+      openCheckout: () => {
+        const url = getVariant(variantId).checkoutUrl;
+        if (url) {
+          window.location.assign(url);
+          return;
+        }
+        setCheckoutOpen(true);
+      },
     }),
     [variantId, checkoutOpen],
   );

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Check, ChevronDown, Mic, ShieldCheck, Star, Truck } from "lucide-react";
-import { toast } from "sonner";
 import { brl, discountPct, getVariant, PRODUCT, unitPrice, type VariantId } from "@/lib/product";
 import { useOffer } from "@/components/livetag/offer-context";
 import { Button } from "@/components/ui/button";
@@ -22,7 +21,6 @@ export function ProductOffer() {
   }
 
   function buy() {
-    toast.success("Produto adicionado com sucesso.");
     openCheckout();
   }
 

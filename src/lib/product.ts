@@ -11,6 +11,7 @@ export type Variant = {
   badge?: string;
   highlight?: boolean;
   imageIndex: number;
+  checkoutUrl?: string;
   installments: { n: number; value: number; interestFree?: boolean }[];
 };
 
@@ -58,6 +59,7 @@ export const PRODUCT = {
       compareAt: 249.9,
       pixPrice: pix(197.9),
       imageIndex: 0,
+      checkoutUrl: "https://seguro.smartwalk.online/api/public/shopify?product=3701085472876&store=37010",
       installments: installments(197.9, [
         { n: 1, value: 197.9, interestFree: true },
         { n: 2, value: 104.3 },
@@ -84,6 +86,7 @@ export const PRODUCT = {
       badge: "Mais vendido",
       highlight: true,
       imageIndex: 1,
+      checkoutUrl: "https://seguro.smartwalk.online/api/public/shopify?product=3701033951761&store=37010",
       installments: installments(329.9),
     },
     {
@@ -96,6 +99,7 @@ export const PRODUCT = {
       pixPrice: pix(419.9),
       badge: "Melhor custo",
       imageIndex: 1,
+      checkoutUrl: "https://seguro.smartwalk.online/api/public/shopify?product=3701024834696&store=37010",
       installments: installments(419.9),
     },
   ] satisfies Variant[],

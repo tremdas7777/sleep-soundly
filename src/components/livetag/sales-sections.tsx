@@ -10,7 +10,6 @@ import {
   Smartphone,
   X,
 } from "lucide-react";
-import { toast } from "sonner";
 import { PRODUCT } from "@/lib/product";
 import { useOffer } from "@/components/livetag/offer-context";
 import {
@@ -121,9 +120,7 @@ export function SalesSections() {
   const { openCheckout } = useOffer();
 
   function buy() {
-    toast.success("Produto adicionado com sucesso.");
     openCheckout();
-    document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
