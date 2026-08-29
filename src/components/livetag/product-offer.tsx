@@ -37,7 +37,7 @@ export function ProductOffer() {
               className="aspect-square w-full object-cover"
             />
           </div>
-          <div className="mt-3 grid grid-cols-4 gap-3">
+          <div className="mt-3 grid grid-cols-3 gap-3">
             {PRODUCT.images.map((img, i) => (
               <button
                 key={img.src}

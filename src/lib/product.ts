@@ -40,16 +40,12 @@ export const PRODUCT = {
       alt: "LiveTag Pro com caixa, app no celular e rastreador GPS",
     },
     {
-      src: "/livetag/product.png",
-      alt: "LiveTag Pro — frente e suporte para coleira",
-    },
-    {
       src: "/livetag/faces.png",
       alt: "LiveTag Pro — frente e verso do rastreador",
     },
     {
-      src: "/livetag/kit.png",
-      alt: "LiveTag Pro — kit com unidades e suportes",
+      src: "/livetag/vs.png",
+      alt: "LiveTag Pro versus outros GPS",
     },
   ],
   variants: [
@@ -87,7 +83,7 @@ export const PRODUCT = {
       pixPrice: pix(329.9),
       badge: "Mais vendido",
       highlight: true,
-      imageIndex: 3,
+      imageIndex: 1,
       installments: installments(329.9),
     },
     {
@@ -99,7 +95,7 @@ export const PRODUCT = {
       compareAt: 749.7,
       pixPrice: pix(419.9),
       badge: "Melhor custo",
-      imageIndex: 3,
+      imageIndex: 1,
       installments: installments(419.9),
     },
   ] satisfies Variant[],
