@@ -36,7 +36,7 @@ export const PRODUCT = {
   tagline: "GPS + gravação de áudio em tempo real",
   images: [
     {
-      src: "/livetag/hero.png",
+      src: "/livetag/hero.jpg",
       alt: "LiveTag Pro com caixa, app no celular e rastreador GPS",
     },
     {
