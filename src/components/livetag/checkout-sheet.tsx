@@ -39,7 +39,7 @@ export function CheckoutSheet() {
         </SheetHeader>
 
         <div className="mt-6 flex gap-3 rounded-2xl bg-[#F6F4EF] p-3">
-          <img src={PRODUCT.images[0].src} alt="" className="h-16 w-16 rounded-xl object-cover" />
+          <img src={PRODUCT.images[0]!.src} alt="" className="h-16 w-16 rounded-xl object-cover" />
           <div className="min-w-0">
             <p className="font-bold">{PRODUCT.shortName}</p>
             <p className="text-sm text-muted-foreground">{variant.qtyLabel}</p>
