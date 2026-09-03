@@ -117,6 +117,7 @@ export function unitPrice(variant: Variant) {
   return variant.price / variant.qty;
 }
 
-export function getVariant(id: VariantId) {
-  return PRODUCT.variants.find((v) => v.id === id) ?? PRODUCT.variants[0];
+export function getVariant(id: VariantId): Variant {
+  const found = PRODUCT.variants.find((v) => v.id === id);
+  return found ?? PRODUCT.variants[0];
 }
