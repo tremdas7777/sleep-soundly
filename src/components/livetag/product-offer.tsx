@@ -28,8 +28,8 @@ export function ProductOffer() {
         <div>
           <div className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
             <img
-              src={PRODUCT.images[imageIndex].src}
-              alt={PRODUCT.images[imageIndex].alt}
+              src={PRODUCT.images[imageIndex]!.src}
+              alt={PRODUCT.images[imageIndex]!.alt}
               className="aspect-square w-full object-cover"
             />
           </div>
@@ -146,7 +146,7 @@ export function ProductOffer() {
             </ul>
           ) : (
             <p className="mt-1 text-sm text-[#0B0D10]/60">
-              em <strong>12x</strong> de <strong>{brl(variant.installments[11].value)}</strong>
+              em <strong>12x</strong> de <strong>{brl(variant.installments[11]!.value)}</strong>
             </p>
           )}
 
