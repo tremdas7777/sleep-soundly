@@ -15,9 +15,7 @@ export function ProductOffer() {
   const off = discountPct(variant);
 
   function selectVariant(id: VariantId) {
-    const next = getVariant(id);
     setVariantId(id);
-    setImageIndex(next.imageIndex);
   }
 
   function buy() {
